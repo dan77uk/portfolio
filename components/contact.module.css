@@ -1,0 +1,39 @@
+.container {
+  border: solid 1px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.container form {
+  min-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container form article {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container form article label {
+  font-size: 0.8rem;
+}
+
+.container form article input,
+.container form article textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: solid 1px;
+}
+
+.container form article textarea {
+  min-height: 200px;
+}
+
+.container form button {
+  padding: 10px 0;
+}
