@@ -33,7 +33,7 @@ export default function Contact() {
   }
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="contact">
       <form onSubmit={handleEmailForm}>
         {messageSubmitted ? (
           <article>

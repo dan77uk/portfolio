@@ -1,0 +1,68 @@
+.header {
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px 20%;
+  height: 15vh;
+  font-family: "Poppins", sans-serif;
+  border: solid 1px rgb(230, 230, 230);
+  position: sticky;
+  top: 0;
+}
+
+.header h1 {
+  background-color: rgb(61, 63, 75);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 svg {
+  fill: white;
+  height: 80%;
+  width: 80%;
+}
+.header ul {
+  display: flex;
+  gap: 5px;
+}
+
+.header ul li a {
+  text-decoration: none;
+  font-weight: 400;
+  padding: 3px 12px;
+  border-radius: 4px;
+  border: solid 2px #f5f5f5;
+  transition: 0.4s;
+}
+
+.header ul li a:hover {
+  border: solid 2px;
+}
+
+.header div {
+  display: flex;
+  gap: 10px;
+}
+
+.header div a {
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+.linkedin,
+.github {
+  fill: #2c89b0;
+  transition: 0.7s;
+}
+
+.linkedin:hover,
+.github:hover {
+  fill: rgb(37, 38, 45);
+}
