@@ -1,41 +1,106 @@
 .container {
-  padding: 20px 20%;
+  width: 100%;
+  /* padding: 150px 0; */
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentWrapper {
+  max-width: 1560px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--blueText);
+}
+
+.col1 {
+  padding: 0 12%;
+  border-right: solid 1px rgb(157, 217, 240);
+  text-align: right;
+}
+
+.col1 h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.6rem;
+  letter-spacing: -0.2rem;
+}
+
+.col1 h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: -0.1rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.col2 {
+  padding: 0 12%;
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
-  background: #2b2c38;
-  min-height: 85vh;
-  transition: 1s;
 }
 
-.container form {
-  min-width: 60%;
+.col2 h4 {
+  font-size: 1.6rem;
+  letter-spacing: -0.1rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+}
+
+.contactForm {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-.container form article {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: solid 1px rgb(232, 232, 232);
+  font-family: "Poppins", "Arial", sans-serif;
 }
 
-.container form article label {
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+  font-style: italic;
   font-size: 0.8rem;
 }
 
-.container form article input,
-.container form article textarea {
-  padding: 8px;
-  border-radius: 4px;
-  border: solid 1px;
+.contactForm button {
+  background-color: #dc4f4f;
+  padding: 1.5rem 0;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-.container form article textarea {
-  min-height: 200px;
+.confirmSent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.container form button {
-  padding: 10px 0;
+.confirmSent h3 {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 5px var(--blueText);
+  border-radius: 50px;
+  color: var(--blueText);
+  font-weight: 600;
+}
+
+.confirmSent p {
+  margin-top: 20px;
+  font-size: 1.3rem;
 }
