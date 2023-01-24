@@ -13,13 +13,14 @@ export default function Content() {
 
       <div className={`${styles.parallax_group}`} id="home">
         <div className={`${styles.parallax_layer} ${styles.hero_text}`}>
-          <div>
-            <h1>
-              DAN<span>PHILLIPS</span>
-            </h1>
-            <h2>Full Stack Developer</h2>
-          </div>
-          <div />
+          <h1>
+            DAN<span>PHILLIPS</span>
+          </h1>
+          <h2>
+            <span className={styles.title_full}>Full</span>{" "}
+            <span className={styles.title_stack}>Stack</span>{" "}
+            <span className={styles.title_developer}>Developer</span>
+          </h2>
         </div>
 
         <div className={`${styles.parallax_layer} ${styles.layer_one}`}></div>

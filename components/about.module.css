@@ -4,35 +4,33 @@
   align-items: center;
   justify-content: center;
   padding: 200px 0;
-  background-color: aliceblue;
-  /* z-index: 100; */
 }
 
 .contentWrapper {
-  max-width: 1560px;
+  max-width: 1296px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  color: var(--blueText);
+  /* background-color: aliceblue; */
+  z-index: 100;
 }
 
 .col1 {
-  padding: 0 12%;
-  border-right: solid 1px rgb(157, 217, 240);
-  text-align: right;
+  padding: 0 80px 0 40px;
+  border-right: solid 1px rgb(60, 60, 60);
 }
 
 .col1 h2 {
-  font-family: "Roboto Slab", serif;
+  font-family: "Playfair Display", serif;
   font-size: 4rem;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.3rem;
 }
 
 .col1 h3 {
   font-weight: 400;
   font-size: 2rem;
   letter-spacing: -0.1rem;
-  margin: 2rem 0 3rem 0;
+  margin: 2rem 0 4rem 0;
 }
 
 .col1 p {
@@ -40,7 +38,7 @@
 }
 
 .col2 {
-  padding: 0 12%;
+  padding: 0 40px 0 80px;
   display: flex;
   flex-direction: column;
   gap: 3rem;

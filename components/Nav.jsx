@@ -24,7 +24,6 @@ export default function Nav({ highlight }) {
             </li>
           </ul>
         </nav>
-        <div className={styles.links}>.</div>
       </article>
     </header>
   );
