@@ -8,7 +8,11 @@ export default function BurgerMenu({ currentTheme, setIsMenuOpen, classID }) {
     setIsMenuOpen(false);
   }
   return (
-    <div className={`${styles.mobileMenu} ${test}`} id={menuTheme}>
+    <div
+      className={`${styles.mobileMenu} ${test}`}
+      id={menuTheme}
+      style={{ display: "block" }}
+    >
       <button onClick={closeMenu}>Close</button>
       <ul>
         <li>

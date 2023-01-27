@@ -4,12 +4,11 @@
   right: -280px;
   width: 280px;
   height: 100vh;
-  transition: 0.8s;
-  z-index: 1;
+  transition: 0.4s;
+  z-index: 100;
   padding: 40px;
-  display: flex;
   flex-direction: column;
-  /* display: none; */
+  display: none;
 }
 
 .mobileMenu button {

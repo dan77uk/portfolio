@@ -1,5 +1,6 @@
 .about_section {
   padding: 75px 40px;
+  z-index: 1;
 }
 
 .about_section h2 {
@@ -8,7 +9,6 @@
   letter-spacing: -0.4rem;
   font-family: "Playfair Display", serif;
   margin-bottom: 60px;
-  z-index: 100;
 }
 
 .column_container {
@@ -47,7 +47,6 @@
 
 .right_column ul {
   display: flex;
-
   gap: 30px;
   font-weight: 600;
 }
