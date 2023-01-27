@@ -99,19 +99,7 @@ export default function Nav({ changeTheme, currentTheme }) {
               )}
             </>
           )}
-          {/* {isMenuOpen ? (
-            <BurgerMenu
-              setIsMenuOpen={setIsMenuOpen}
-              currentTheme={currentTheme}
-              classID="open"
-            />
-          ) : (
-            <BurgerMenu
-              setIsMenuOpen={setIsMenuOpen}
-              currentTheme={currentTheme}
-              classID="close"
-            />
-          )} */}
+
           <div id={toggleTheme}>
             <input
               className={styles.themeToggle}

@@ -10,8 +10,8 @@ export default function Home() {
     <main className={theme}>
       <section className="main-wrapper">
         <Nav changeTheme={setTheme} currentTheme={theme} />
-        <Hero />
-        <About />
+        {/* <Hero />
+        <About /> */}
       </section>
     </main>
   );
