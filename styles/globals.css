@@ -13,7 +13,7 @@
 
 :root {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-family: "Poppins", "Arial", sans-serif;
   --darkBackground: #242f3f;
   --lightBackground: #e1e4e8;

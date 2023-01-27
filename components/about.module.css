@@ -14,7 +14,13 @@
 .column_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 120px;
+  gap: 80px;
+}
+
+.left_column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .left_column h3 {
@@ -47,6 +53,21 @@
 
 .right_column ul {
   display: flex;
-  gap: 30px;
+  gap: 10px;
+  flex-wrap: wrap;
   font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .column_container {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 720px) {
+  .column_container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 }

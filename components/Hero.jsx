@@ -1,6 +1,6 @@
 import styles from "./hero.module.css";
 import { useInView } from "react-intersection-observer";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "./../context/Theme";
 
 export default function Hero() {
@@ -12,7 +12,7 @@ export default function Hero() {
     <section className={`${styles.hero_section} ${themeStyle}`}>
       {/* {elementVisible ? <Nav highlight="highlight" /> : <Nav />} */}
       <div className={styles.circle_container}>
-        <div className={styles.red}>
+        <div className={`${styles.red}`}>
           <svg
             width="137"
             height="136"
