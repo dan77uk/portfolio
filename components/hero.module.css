@@ -1,0 +1,80 @@
+.hero_section {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_section h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 6rem;
+  letter-spacing: -0.3rem;
+  font-weight: 600;
+}
+
+.hero_section h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1rem;
+  margin: 10px 0 40px 0;
+}
+
+.hero_section h2 span {
+  font-weight: 400;
+}
+
+.circle_container {
+  display: flex;
+}
+
+.red {
+  position: relative;
+  fill-opacity: 0.4;
+}
+
+.green {
+  position: relative;
+  margin-left: -40px;
+  fill-opacity: 0.7;
+}
+
+.yellow {
+  position: relative;
+  margin-left: -40px;
+  fill-opacity: 0.6;
+}
+
+@media (max-width: 920px) {
+  .hero_section h1 {
+    font-size: 5rem;
+    letter-spacing: -0.3rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero_section h1 {
+    font-size: 4rem;
+    letter-spacing: -0.3rem;
+  }
+}
+
+@media (max-width: 594px) {
+  .hero_section h1 span {
+    display: block;
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 490px) {
+  .hero_section h1 span {
+    font-size: 5rem;
+    line-height: 1;
+  }
+}
+
+@media (mac-width: 300px) {
+  .hero_section h1 span {
+    font-size: 4rem;
+    line-height: 1;
+  }
+}

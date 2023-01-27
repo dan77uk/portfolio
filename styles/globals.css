@@ -13,16 +13,146 @@
 
 :root {
   scroll-behavior: smooth;
-
+  overflow-x: hidden;
   font-family: "Poppins", "Arial", sans-serif;
-  --button: #ff385c;
-  --dark-background: #201d1c;
-  --dark: #2b2726;
-  --white: #f5f3ef;
-  --main-highlight: #4d8188;
-  --aubergine: #3a4a5c;
-  --backgroundColor: #f5f7f3;
-  --mainTextColor: #5b6665;
-  background-color: #efeeea;
-  color: var(--mainTextColor);
+  --darkBackground: #242f3f;
+  --lightBackground: #e1e4e8;
+  --darkContrastBackground: #212b39;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  transition: 0.6s;
+}
+
+.main-wrapper {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.dark {
+  background-color: var(--darkBackground);
+}
+
+.light {
+  background-color: var(--lightBackground);
+}
+
+/* --- Nav Theme Colors --- */
+.dark nav li a {
+  color: var(--lightBackground);
+}
+
+.light nav li a {
+  color: var(--darkBackground);
+}
+
+.dark nav li a:hover {
+  color: var(--lightBackground);
+  border-bottom: solid 2px var(--lightBackground);
+}
+
+.light nav li a:hover {
+  color: var(--darkBackground);
+  border-bottom: solid 2px var(--darkBackground);
+}
+
+/* --- Theme Toggle Colors --- */
+#lightStyle label {
+  background-color: var(--darkBackground);
+}
+
+#lightStyle label span {
+  background-color: var(--lightBackground);
+  background-color: var(--lightBackground);
+}
+
+#darkStyle,
+#lightStyle {
+  display: flex;
+}
+
+#darkStyle label {
+  background-color: var(--lightBackground);
+}
+
+#darkStyle label span {
+  background-color: var(--darkBackground);
+}
+
+/* --- Burger Menu Button --- */
+.lightBurgerButton svg {
+  stroke: var(--darkBackground);
+}
+.lightBurgerButton:hover {
+  background-color: #cdcdcd !important;
+}
+
+.darkBurgerButton svg {
+  stroke: var(--lightBackground);
+}
+.darkBurgerButton:hover {
+  background-color: #1d2532 !important;
+}
+
+/* --- Burger Menu --- */
+.openMenu {
+  transform: translateX(-280px);
+}
+
+#lightMenu {
+  background-color: rgb(233, 233, 233);
+}
+
+#lightMenu button {
+  background-color: var(--darkBackground);
+  color: var(--lightBackground);
+}
+
+#lightMenu a {
+  color: var(--darkBackground);
+}
+
+#lightMenu a:hover {
+  border-bottom: solid 2px var(--darkBackground);
+}
+
+#darkMenu {
+  background-color: rgb(32, 38, 47);
+}
+
+#darkMenu button {
+  background-color: var(--lightBackground);
+  color: var(--darkBackground);
+}
+#darkMenu a {
+  color: var(--lightBackground);
+}
+
+#darkMenu a:hover {
+  border-bottom: solid 2px var(--lightBackground);
+}
+
+/* --- Hero Text Colors --- */
+.dark_colorway h1,
+.dark_about_colorway {
+  color: rgb(230, 253, 255);
+}
+
+.dark_colorway h2 {
+  color: var(--lightBackground);
+}
+
+.light_colorway h1,
+.light_about_colorway {
+  color: var(--darkBackground);
+}
+
+.light_colorway h2 {
+  color: var(--darkBackground);
 }

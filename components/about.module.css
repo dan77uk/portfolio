@@ -1,112 +1,53 @@
-.container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.about_section {
+  padding: 75px 40px;
 }
 
-.contentWrapper {
-  max-width: 1296px;
-  margin: 0 auto;
+.about_section h2 {
+  font-size: 5rem;
+  font-weight: 200;
+  letter-spacing: -0.4rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 60px;
+  z-index: 100;
+}
+
+.column_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  z-index: 100;
-  background: rgb(239, 238, 234);
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(239, 238, 234, 1) 0%,
-    rgba(239, 238, 234, 0.46680679107580536) 68%,
-    rgba(239, 238, 234, 0) 100%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(239, 238, 234, 1) 0%,
-    rgba(239, 238, 234, 0.46680679107580536) 68%,
-    rgba(239, 238, 234, 0) 100%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(239, 238, 234, 1) 0%,
-    rgba(239, 238, 234, 0.46680679107580536) 68%,
-    rgba(239, 238, 234, 0) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efeeea",endColorstr="#efeeea",GradientType=1);
+  gap: 120px;
 }
 
-.col1 {
-  padding: 0 80px 0 40px;
-  border-right: solid 1px rgb(60, 60, 60);
-}
-
-.col1 h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 4rem;
-  letter-spacing: -0.3rem;
-}
-
-.col1 h3 {
-  font-weight: 400;
+.left_column h3 {
   font-size: 2rem;
-  letter-spacing: -0.1rem;
-  margin: 2rem 0 4rem 0;
+  font-weight: 400;
+  margin: 0 0 50px 0;
 }
 
-.col1 p {
-  margin: 15px 0;
+.left_column p {
+  font-size: 1.2rem;
+  margin: 20px 0;
 }
 
-.col2 {
-  padding: 0 40px 0 80px;
+.right_column {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 40px;
+  width: 100%;
 }
 
-.col2 h4 {
-  font-size: 1.6rem;
-  letter-spacing: -0.1rem;
+.right_column h4 {
+  font-size: 1.8rem;
   font-weight: 600;
-  margin: 0 0 2rem 0;
+  letter-spacing: -0.1rem;
 }
 
-.heading {
-  animation-duration: 5s;
-  animation-name: slideIn;
+.right_column p {
+  margin: 20px 0;
 }
 
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+.right_column ul {
+  display: flex;
 
-@media (max-width: 720px) {
-  .contentWrapper {
-    max-width: 95%;
-    grid-template-columns: 1fr;
-  }
-
-  .col1 {
-    padding: 0 5%;
-    border-right: none;
-    text-align: left;
-  }
-  .col2 {
-    padding: 0 5%;
-  }
+  gap: 30px;
+  font-weight: 600;
 }
