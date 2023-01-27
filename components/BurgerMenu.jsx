@@ -1,41 +1,68 @@
-import styles from "./burgermenu.module.css";
+import { slide as Menu } from "react-burger-menu";
 
-export default function BurgerMenu({ currentTheme, setIsMenuOpen, classID }) {
-  const menuTheme = `${currentTheme}Menu`;
-  const test = `${classID}Menu`;
-
-  function closeMenu() {
-    setIsMenuOpen(false);
+export default function BurgerMenu({ currentTheme }) {
+  let bars,
+    menuWrap,
+    crossColor = "";
+  if (currentTheme === "dark") {
+    bars = "#e1e4e8";
+    menuWrap = "#2a384c";
+    crossColor = "#242f3f";
+  } else {
+    bars = "#242f3f";
+    menuWrap = "#EDEDED";
+    crossColor = "#e1e4e8";
   }
+  const styles = {
+    bmBurgerBars: {
+      background: bars,
+      borderRadius: "10px",
+    },
+
+    bmCrossButton: {
+      background: bars,
+    },
+    bmCross: {
+      margin: "-1px 0 0 1px",
+      background: crossColor,
+    },
+
+    bmMenu: {
+      background: menuWrap,
+      padding: "50px",
+    },
+    menuItem: {
+      border: "solid",
+      background: "red",
+    },
+  };
+
   return (
-    <div
-      className={`${styles.mobileMenu} ${test}`}
-      id={menuTheme}
-      style={{ display: "block" }}
-    >
-      <button onClick={closeMenu}>Close</button>
-      <ul>
-        <li>
-          <a href="#top" onClick={closeMenu}>
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#about" onClick={closeMenu}>
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#projects" onClick={closeMenu}>
-            Projects
-          </a>
-        </li>
-        <li>
-          <a href="#contact" onClick={closeMenu}>
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
+    <Menu styles={styles} right>
+      <div>
+        <ul>
+          <li>
+            <a className="menu-item" href="/">
+              Home
+            </a>
+          </li>
+          <li>
+            <a className="menu-item" href="#about">
+              About
+            </a>
+          </li>
+          <li>
+            <a className="menu-item" href="#projects">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a className="menu-item" href="#contact">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </Menu>
   );
 }

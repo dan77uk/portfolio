@@ -17,7 +17,7 @@
   font-family: "Poppins", "Arial", sans-serif;
   --darkBackground: #242f3f;
   --lightBackground: #e1e4e8;
-  --darkContrastBackground: #212b39;
+  --darkContrastBackground: #2a384c;
 }
 
 button {
@@ -100,41 +100,53 @@ main {
 }
 
 /* --- Burger Menu --- */
-.openMenu {
-  transform: translateX(-280px);
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 25px;
+  right: 120px;
+  top: 34px;
 }
 
-#lightMenu {
-  background-color: rgb(233, 233, 233);
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  height: 4px !important;
+  border-radius: 5px;
 }
 
-#lightMenu button {
-  background-color: var(--darkBackground);
-  color: var(--lightBackground);
+.bm-burger-bars:nth-child(2) {
+  width: 25px;
 }
 
-#lightMenu a {
-  color: var(--darkBackground);
+.bm-burger-bars:last-child {
+  width: 20px;
 }
 
-#lightMenu a:hover {
-  border-bottom: solid 2px var(--darkBackground);
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  margin: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: red;
 }
 
-#darkMenu {
-  background-color: rgb(32, 38, 47);
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  margin-top: -48px;
 }
 
-#darkMenu button {
-  background-color: var(--lightBackground);
-  color: var(--darkBackground);
-}
-#darkMenu a {
-  color: var(--lightBackground);
+.bm-item-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px !important;
 }
 
-#darkMenu a:hover {
-  border-bottom: solid 2px var(--lightBackground);
+.bm-item-list ul li a {
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.08rem;
 }
 
 /* --- Hero Text Colors --- */

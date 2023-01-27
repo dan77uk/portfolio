@@ -71,13 +71,17 @@
 @media (max-width: 490px) {
   .hero_section h1 span {
     font-size: 5rem;
-    line-height: 1;
   }
 }
 
-@media (mac-width: 300px) {
+@media (max-width: 410px) {
   .hero_section h1 span {
     font-size: 4rem;
-    line-height: 1;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero_section {
+    padding: 50px 20px;
   }
 }
