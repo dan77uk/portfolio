@@ -63,6 +63,32 @@
     grid-template-columns: 1.5fr 1fr;
     gap: 60px;
   }
+
+  .about_section h2 {
+    margin-bottom: 40px;
+  }
+
+  .left_column h3 {
+    font-size: 1.8rem;
+    margin: 0 0 0px 0;
+  }
+
+  .left_column p {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+
+  .right_column {
+    gap: 30px;
+  }
+
+  .right_column h4 {
+    font-size: 1.5rem;
+  }
+
+  .right_column p {
+    margin: 10px 0;
+  }
 }
 
 @media (max-width: 720px) {
@@ -70,4 +96,10 @@
     grid-template-columns: 1fr;
     gap: 50px;
   }
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 360px) {
 }

@@ -136,9 +136,12 @@ main {
 }
 
 /* --- Hero Text Colors --- */
-.dark_colorway h1,
+.dark_colorway h1 {
+  color: #f5e612;
+}
+
 .dark_about_colorway {
-  color: rgb(230, 253, 255);
+  color: var(--lightBackground);
 }
 
 .dark_colorway h2 {

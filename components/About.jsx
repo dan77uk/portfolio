@@ -14,8 +14,8 @@ export default function About() {
       <section className={styles.column_container}>
         <section className={styles.left_column}>
           <h3>
-            I’m a software developer looking for something playful with an
-            immersive UI or something more serious with a spaghetti API.
+            I’m a software developer looking for something playful in an
+            immersive UI or maybe something more serious with a spaghetti API.
           </h3>
           <p>
             I have a strong foundation in software development principles and

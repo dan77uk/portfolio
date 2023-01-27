@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className={`${styles.hero_section} ${themeStyle}`}>
       {/* {elementVisible ? <Nav highlight="highlight" /> : <Nav />} */}
-      <div className={styles.circle_container}>
+      {/* <div className={styles.circle_container}>
         <div className={`${styles.red}`}>
           <svg
             width="137"
@@ -60,16 +60,16 @@ export default function Hero() {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
 
       <h1>
         <span className={styles.title_full}>Full </span>
         <span className={styles.title_stack}>Stack </span>
         <span className={styles.title_developer}>Developer</span>
       </h1>
-      <h2>
+      {/* <h2>
         DAN <span>PHILLIPS</span>
-      </h2>
+      </h2> */}
     </section>
   );
 }
