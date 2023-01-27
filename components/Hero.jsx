@@ -62,14 +62,14 @@ export default function Hero() {
         </div>
       </div>
 
-      <h2>
-        DAN<span>PHILLIPS</span>
-      </h2>
       <h1>
         <span className={styles.title_full}>Full </span>
         <span className={styles.title_stack}>Stack </span>
         <span className={styles.title_developer}>Developer</span>
       </h1>
+      <h2>
+        DAN <span>PHILLIPS</span>
+      </h2>
     </section>
   );
 }

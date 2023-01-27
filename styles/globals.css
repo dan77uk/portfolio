@@ -25,7 +25,7 @@ button {
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   transition: 0.6s;
 }
 
@@ -84,21 +84,6 @@ main {
   background-color: var(--darkBackground);
 }
 
-/* --- Burger Menu Button --- */
-.lightBurgerButton svg {
-  stroke: var(--darkBackground);
-}
-.lightBurgerButton:hover {
-  background-color: #cdcdcd !important;
-}
-
-.darkBurgerButton svg {
-  stroke: var(--lightBackground);
-}
-.darkBurgerButton:hover {
-  background-color: #1d2532 !important;
-}
-
 /* --- Burger Menu --- */
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -135,6 +120,7 @@ main {
   position: fixed;
   height: 100%;
   margin-top: -48px;
+  opacity: 0.95;
 }
 
 .bm-item-list ul {

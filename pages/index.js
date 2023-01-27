@@ -11,7 +11,7 @@ export default function Home() {
       <section className="main-wrapper">
         <Nav changeTheme={setTheme} currentTheme={theme} />
         <Hero />
-        {/* <About /> */}
+        <About />
       </section>
     </main>
   );
