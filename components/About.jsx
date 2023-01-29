@@ -32,7 +32,7 @@ export default function About() {
             opportunity if a remote or hybrid option is available.
           </p>
         </section>
-        <section className={styles.right_column}>
+        {/* <section className={styles.right_column}>
           <article>
             <h4>FrontEnd</h4>
             <p>
@@ -66,7 +66,7 @@ export default function About() {
               nulla pariatur.
             </p>
           </article>
-        </section>
+        </section> */}
       </section>
     </section>
   );

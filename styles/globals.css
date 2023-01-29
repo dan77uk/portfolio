@@ -13,11 +13,12 @@
 
 :root {
   scroll-behavior: smooth;
-  /* overflow-x: hidden; */
   font-family: "Poppins", "Arial", sans-serif;
-  --darkBackground: #242f3f;
-  --lightBackground: #e1e4e8;
-  --darkContrastBackground: #2a384c;
+  --darkBackground: #232d38;
+  --lightBackground: #f1f1f1;
+  --greyFont: #565656;
+  --red: #ff1c60;
+  --blue: #1cc8ff;
 }
 
 button {
@@ -27,11 +28,6 @@ button {
 main {
   min-height: 100vh;
   transition: 0.6s;
-}
-
-.main-wrapper {
-  max-width: 1296px;
-  margin: 0 auto;
 }
 
 .dark {
@@ -53,21 +49,20 @@ main {
 
 .dark nav li a:hover {
   color: var(--lightBackground);
-  border-bottom: solid 2px var(--lightBackground);
+  border-bottom: solid 2px var(--blue);
 }
 
 .light nav li a:hover {
   color: var(--darkBackground);
-  border-bottom: solid 2px var(--darkBackground);
+  border-bottom: solid 2px var(--red);
 }
 
 /* --- Theme Toggle Colors --- */
 #lightStyle label {
-  background-color: var(--darkBackground);
+  background-color: var(--red);
 }
 
 #lightStyle label span {
-  background-color: var(--lightBackground);
   background-color: var(--lightBackground);
 }
 
@@ -77,82 +72,9 @@ main {
 }
 
 #darkStyle label {
-  background-color: var(--lightBackground);
+  background-color: var(--blue);
 }
 
 #darkStyle label span {
   background-color: var(--darkBackground);
-}
-
-/* --- Burger Menu --- */
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 30px;
-  height: 25px;
-  right: 120px;
-  top: 34px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  height: 4px !important;
-  border-radius: 5px;
-}
-
-.bm-burger-bars:nth-child(2) {
-  width: 25px;
-}
-
-.bm-burger-bars:last-child {
-  width: 20px;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  margin: 20px;
-  height: 30px;
-  width: 30px;
-  background-color: red;
-}
-
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-  margin-top: -48px;
-  opacity: 0.95;
-}
-
-.bm-item-list ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px !important;
-}
-
-.bm-item-list ul li a {
-  font-size: 1.4rem !important;
-  font-weight: 400 !important;
-  letter-spacing: -0.08rem;
-}
-
-/* --- Hero Text Colors --- */
-.dark_colorway h1 {
-  color: #f5e612;
-}
-
-.dark_about_colorway {
-  color: var(--lightBackground);
-}
-
-.dark_colorway h2 {
-  color: var(--lightBackground);
-}
-
-.light_colorway h1,
-.light_about_colorway {
-  color: var(--darkBackground);
-}
-
-.light_colorway h2 {
-  color: var(--darkBackground);
 }

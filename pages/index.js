@@ -8,11 +8,9 @@ export default function Home() {
   const { theme, setTheme } = useContext(ThemeContext);
   return (
     <main className={theme}>
-      <section className="main-wrapper">
-        <Nav changeTheme={setTheme} currentTheme={theme} />
-        <Hero />
-        <About />
-      </section>
+      <Nav changeTheme={setTheme} currentTheme={theme} />
+      <Hero />
+      {/* <About /> */}
     </main>
   );
 }
