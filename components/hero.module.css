@@ -75,3 +75,11 @@
     width: 150px;
   }
 }
+
+@media (max-width: 480px) {
+  .hero_section h1 {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin: 30px 0 80px 0;
+  }
+}

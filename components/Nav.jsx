@@ -1,55 +1,78 @@
 import styles from "./nav.module.css";
-import { useState } from "react";
-import { ScreenSize } from "./custom_hooks/ScreenSize";
+import { useContext } from "react";
+import { ThemeContext } from "./../context/Theme";
 
 export default function Nav({ changeTheme, currentTheme }) {
-  const [toggleTheme, setToggleTheme] = useState("darkStyle");
-  const { width } = ScreenSize();
-
-  console.log(width);
+  const { theme } = useContext(ThemeContext);
 
   function handleToggle() {
     if (currentTheme === "dark") {
       changeTheme("light");
-      setToggleTheme("lightStyle");
     } else {
       changeTheme("dark");
-      setToggleTheme("darkStyle");
     }
   }
 
-  const themeStyle = {
-    darkBack: "#000",
-  };
+  let themeStyle = {};
+  if (theme === "dark") {
+    themeStyle = {
+      background: "#232d38",
+      link: "#f1f1f1", // white
+      label: "#1cc8ff", // blue
+      button: "#232d38", // dark background
+    };
+  } else {
+    themeStyle = {
+      background: "#f1f1f1",
+      link: "#232d38", // dark background
+      label: "#ff1c60", // red
+      button: "#f1f1f1", // white
+    };
+  }
 
   return (
-    <header className={styles.header}>
-      {/* <article style={{ background: themeStyle.darkBack }}> */}
+    <header
+      className={styles.header}
+      style={{ background: themeStyle.background }}
+    >
       <article>
         <nav>
           <ul>
             <li>
-              <a href="#home">HOME</a>
+              <a href="#home" style={{ color: themeStyle.link }}>
+                HOME
+              </a>
             </li>
             <li>
-              <a href="#about">ABOUT</a>
+              <a href="#about" style={{ color: themeStyle.link }}>
+                ABOUT
+              </a>
             </li>
 
             <li>
-              <a href="#contact">CONTACT</a>
+              <a href="#contact" style={{ color: themeStyle.link }}>
+                CONTACT
+              </a>
             </li>
           </ul>
         </nav>
 
-        <div id={toggleTheme}>
+        <div style={{ display: "flex" }}>
           <input
             className={styles.themeToggle}
             id="themeToggle"
             type="checkbox"
             onChange={handleToggle}
           />
-          <label className={styles.themeToggleLabel} htmlFor="themeToggle">
-            <span className={styles.themeToggleButton} />
+          <label
+            className={styles.themeToggleLabel}
+            htmlFor="themeToggle"
+            style={{ backgroundColor: themeStyle.label }}
+          >
+            <span
+              className={styles.themeToggleButton}
+              style={{ backgroundColor: themeStyle.button }}
+            />
           </label>
         </div>
       </article>
