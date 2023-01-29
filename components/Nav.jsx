@@ -1,35 +1,38 @@
 import styles from "./nav.module.css";
-import { useContext } from "react";
-import { ThemeContext } from "./../context/Theme";
 
 export default function Nav({ changeTheme, currentTheme }) {
-  const { theme } = useContext(ThemeContext);
-
   function handleToggle() {
     if (currentTheme === "dark") {
       changeTheme("light");
+      localStorage.setItem("theme", JSON.stringify("light"));
     } else {
       changeTheme("dark");
+      localStorage.setItem("theme", JSON.stringify("dark"));
     }
   }
 
   let themeStyle = {};
-  if (theme === "dark") {
+  if (currentTheme === "dark") {
     themeStyle = {
-      link: "#f1f1f1", // white
-      label: "#1cc8ff", // blue
-      button: "#232d38", // dark background
+      link: "#f1f1f1",
+      label: "#1cc8ff",
+      button: "#232d38",
+      headerBackground: "#232d38",
     };
   } else {
     themeStyle = {
-      link: "#232d38", // dark background
-      label: "#ff1c60", // red
-      button: "#f1f1f1", // white
+      link: "#232d38",
+      label: "#ff1c60",
+      button: "#f1f1f1",
+      headerBackground: "#f1f1f1",
     };
   }
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      style={{ background: themeStyle.headerBackground }}
+    >
       <article>
         <nav>
           <ul>

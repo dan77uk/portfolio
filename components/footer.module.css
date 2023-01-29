@@ -1,14 +1,33 @@
-.sectionwrapper {
+.footer_section {
   width: 100%;
-  background-color: rgb(168, 191, 219);
+  padding: 20px 0;
 }
 
-.container {
-  max-width: 1920px;
+.wrapper {
+  max-width: 760px;
   margin: 0 auto;
-  color: var(--dark);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper ul {
+  display: flex;
+  gap: 10px;
+}
+
+.wrapper ul a svg {
+  width: 40px;
+  height: 40px;
+  transition: 0.4s;
+}
+
+.wrapper ul a svg:hover {
+  filter: brightness(180%);
+}
+
+@media (max-width: 840px) {
+  .wrapper {
+    padding: 0 40px;
+  }
 }

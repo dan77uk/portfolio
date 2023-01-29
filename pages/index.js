@@ -1,17 +1,23 @@
-import { ThemeContext } from "./../context/Theme";
-import { useContext } from "react";
+import { useState, useEffect } from "react";
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Contact from "../components/Contact";
 
 export default function Home() {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const [theme, setTheme] = useState();
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    console.log(stored);
+    setTheme(stored ? JSON.parse(stored) : "light");
+  }, [theme]);
+
   return (
     <main className={theme}>
       <Nav changeTheme={setTheme} currentTheme={theme} />
-      <Hero />
-      {/* <About /> */}
+      <Hero theme={theme} />
+      <About theme={theme} />
       <Contact theme={theme} />
     </main>
   );

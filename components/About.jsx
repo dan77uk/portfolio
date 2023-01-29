@@ -1,11 +1,8 @@
 import styles from "./about.module.css";
 import { useInView } from "react-intersection-observer";
-import { useContext } from "react";
-import { ThemeContext } from "./../context/Theme";
 
-export default function About() {
+export default function About({ theme }) {
   const { ref: myRef, inView: elementVisible } = useInView();
-  const { theme } = useContext(ThemeContext);
 
   return (
     <section className={styles.about_section} id="about">

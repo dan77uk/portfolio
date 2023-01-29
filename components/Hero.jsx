@@ -1,10 +1,7 @@
 import styles from "./hero.module.css";
 import { useInView } from "react-intersection-observer";
-import { useContext } from "react";
-import { ThemeContext } from "./../context/Theme";
 
-export default function Hero() {
-  const { theme } = useContext(ThemeContext);
+export default function Hero({ theme }) {
   const { ref: myRef, inView: elementVisible } = useInView();
 
   let themeStyle = {};

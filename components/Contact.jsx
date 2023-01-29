@@ -147,7 +147,7 @@ export default function Contact({ theme }) {
           </div>
         </section>
       </section>
-      <Footer />
+      <Footer theme={theme} />
     </>
   );
 }
