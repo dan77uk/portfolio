@@ -46,6 +46,21 @@
   margin-left: 50px;
 }
 
+.animatePlane {
+  animation-duration: 5s;
+  animation-name: animate-plane;
+  animation: animate-plane 10s linear 0.5s 2 normal forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate-plane {
+  100% {
+    transform: translateY(-100vh);
+    display: none;
+    opacity: 0;
+  }
+}
+
 @media (max-width: 840px) {
   .wrapper {
     padding: 60px 40px;

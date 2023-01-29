@@ -16,14 +16,12 @@ export default function Nav({ changeTheme, currentTheme }) {
   let themeStyle = {};
   if (theme === "dark") {
     themeStyle = {
-      background: "#232d38",
       link: "#f1f1f1", // white
       label: "#1cc8ff", // blue
       button: "#232d38", // dark background
     };
   } else {
     themeStyle = {
-      background: "#f1f1f1",
       link: "#232d38", // dark background
       label: "#ff1c60", // red
       button: "#f1f1f1", // white
@@ -31,10 +29,7 @@ export default function Nav({ changeTheme, currentTheme }) {
   }
 
   return (
-    <header
-      className={styles.header}
-      style={{ background: themeStyle.background }}
-    >
+    <header className={styles.header}>
       <article>
         <nav>
           <ul>

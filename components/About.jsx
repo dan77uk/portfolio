@@ -6,31 +6,62 @@ import { ThemeContext } from "./../context/Theme";
 export default function About() {
   const { ref: myRef, inView: elementVisible } = useInView();
   const { theme } = useContext(ThemeContext);
-  const themeStyle = `${theme}_about_colorway`;
 
   return (
-    <section className={`${styles.about_section} ${themeStyle}`} id="about">
-      <h2>Hello</h2>
-      <section className={styles.column_container}>
-        <section className={styles.left_column}>
-          <h3>
-            I’m a software developer looking for something playful in an
-            immersive UI or maybe something more serious with a spaghetti API.
-          </h3>
-          <p>
-            I have a strong foundation in software development principles and
-            I'm comfortable working with multiple tools and frameworks, and am
-            also able to quickly adapt to new languages and libraries.
-          </p>
-          <p>
-            I graduated from the Northcoders Software Development bootcamp in
-            January 2023 and I'm now looking for a permanent developer position
-            or an internship.
-          </p>
-          <p>
-            I'm based in Northumberland but would be interested in any
-            opportunity if a remote or hybrid option is available.
-          </p>
+    <section className={styles.about_section} id="about">
+      {/* <div className={styles.depthDiv}></div> */}
+      <section className={styles.wrapper}>
+        <h2>About Me.</h2>
+        <h3>
+          I'm a software developer interested in all things code. I graduated
+          from Northcoders Software Development course in January 2023, & I'm
+          now looking for a permanent opportunity, or an internship.
+        </h3>
+        <section className={styles.column_container}>
+          <article ref={myRef}>
+            <p>
+              I have a strong foundation in software development principles and
+              I'm comfortable working with multiple tools and frameworks, and am
+              also able to quickly adapt to new languages and libraries. Test
+              Driven Development, agile practices
+            </p>
+          </article>
+          <article>
+            <p>
+              I'm based in Northumberland but would be interested in any
+              opportunity if a remote or hybrid option is available.
+            </p>
+          </article>
+        </section>
+        <section className={styles.card_container}>
+          <article>
+            <h4>FrontEnd</h4>
+            <p>I enjoy building immersive & responsive user experiences.</p>
+            <p>
+              I am comfortable in vanilla JavaScript, HTML & CSS, but I love the
+              speed & flexability of JavaScript frameworks.
+            </p>
+          </article>
+          <article>
+            <h4>BackEnd</h4>
+            <p>
+              I can create RESTful API's in Node.js using the Model View
+              Controller (MVC) pattern for both relational & document databases.
+            </p>
+            <p></p>
+          </article>
+          <article>
+            <h4>WorkFlow</h4>
+            <p>
+              I am comfortable working in Git/GitHub & have developed software
+              in an Agile-environemnt
+            </p>
+            <p>
+              Throughout my time at Northcoders, with extensive pair
+              programming, code reviews & pull requests, Kanban boards, daily
+              stand-ups, spiking & RATS.
+            </p>
+          </article>
         </section>
         {/* <section className={styles.right_column}>
           <article>

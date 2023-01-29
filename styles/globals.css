@@ -19,6 +19,7 @@
   --greyFont: #565656;
   --red: #ff1c60;
   --blue: #1cc8ff;
+  color: var(--greyFont);
 }
 
 button {

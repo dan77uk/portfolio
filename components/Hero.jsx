@@ -39,13 +39,18 @@ export default function Hero() {
             Get In Touch
           </a>
         </div>
-        <div className={styles.plane}>
+        <div
+          className={`${styles.plane} ${
+            elementVisible ? styles.animatePlane : null
+          }`}
+        >
           <img
             src={themeStyle.planeImg}
             alt="A paper airplane flying vertically up the middle of the page"
           />
         </div>
       </section>
+      {/* <h5 ref={myRef}>this is a triger</h5> */}
     </section>
   );
 }
