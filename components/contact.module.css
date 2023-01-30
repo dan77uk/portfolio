@@ -104,9 +104,6 @@
 }
 
 @media (max-width: 840px) {
-  .wrapper {
-    padding: 100px 40px;
-  }
   .contactForm button {
     width: 100%;
   }
