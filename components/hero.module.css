@@ -1,100 +1,88 @@
 .hero_section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
 }
 
 .wrapper {
-  max-width: 720px;
+  position: relative;
+  max-width: 960px;
   margin: 0 auto;
-  text-align: center;
-  padding: 60px 0;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
 }
 
 .hero_section h2 {
-  font-size: 6rem;
+  font-size: 5rem;
   letter-spacing: -0.3rem;
   font-weight: 600;
+  line-height: 1;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: var(--blue);
 }
 
-.hero_section h1 {
-  font-size: 2.4rem;
-  line-height: 3.25rem;
+.hero_section h3 {
+  font-size: 3rem;
+  line-height: 3.5rem;
   letter-spacing: -0.1rem;
   font-weight: 400;
-  width: 100%;
-  margin: 10px 0;
+  max-width: 620px;
+  color: #ffffff;
 }
 
 .link_wrapper {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 40px 0;
+  gap: 10px;
 }
 
 .link_wrapper a {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border-radius: 5px;
-  color: var(--lightBackground);
+  color: #ffffff;
   font-weight: 600;
+  transition: 0.5s;
+  border: solid 2px var(--blue);
 }
 
-.plane img {
-  margin-left: 50px;
-}
-
-.animatePlane {
-  animation-duration: 5s;
-  animation-name: animate-plane;
-  animation: animate-plane 10s linear 0.5s 2 normal forwards;
-  animation-fill-mode: forwards;
-}
-
-@keyframes animate-plane {
-  100% {
-    transform: translateY(-100vh);
-    display: none;
-    opacity: 0;
-  }
+.link_wrapper a:hover {
+  background-color: var(--blue);
 }
 
 @media (max-width: 840px) {
   .wrapper {
-    padding: 60px 40px;
+    padding: 100px 40px;
   }
 }
 
 @media (max-width: 600px) {
   .hero_section h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .hero_section h1 {
-    font-size: 2rem;
-    line-height: 2.75rem;
-    margin: 30px 0;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin: 20px 0;
   }
 
   .link_wrapper {
-    display: flex;
-    justify-content: center;
     gap: 10px;
     margin: 40px 0;
-  }
-
-  .plane img {
-    margin-left: 35px;
-    width: 150px;
   }
 }
 
 @media (max-width: 480px) {
   .hero_section h1 {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    margin: 30px 0 80px 0;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .link_wrapper {
+    flex-direction: column;
   }
 }

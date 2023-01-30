@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./contact.module.css";
 import Footer from "./Footer";
 
-export default function Contact({ theme }) {
+export default function Contact() {
   const [messageSubmitted, setMessageSubmitted] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,37 +33,18 @@ export default function Contact({ theme }) {
     });
   }
 
-  let themeStyle = {};
-  if (theme === "dark") {
-    themeStyle = {
-      h2: "#1cc8ff", // blue
-      para: "#f1f1f1", // white
-      submit: "#ff1c60", // red
-      input: "#1B2229",
-      inputText: "#f1f1f1",
-    };
-  } else {
-    themeStyle = {
-      h2: "#ff1c60", //red
-      para: "#565656", // white
-      submit: "#1cc8ff", // blue
-      input: "#FFFFFF",
-      inputText: "#565656",
-    };
-  }
-
   return (
     <>
       <section className={styles.contact_section} id="contact">
         <section className={styles.wrapper}>
-          <h2 style={{ color: themeStyle.h2 }}>Get In Touch.</h2>
+          <h2>Get In Touch</h2>
           <div className={styles.contact_columns}>
-            <div style={{ color: themeStyle.para }}>
+            <div>
               <h3>Everyone likes to get mail.</h3>
               <p>
-                If you have a software developer position in your organisation
-                you would like to discuss with me, or if you have an internship
-                or even a shadowing opportunity, please contact me.
+                If you have a developer position in your organisation you would
+                like to discuss with me, or if you have an internship or even a
+                shadowing opportunity, please contact me.
               </p>
               <p>My CV is available on request.</p>
             </div>
@@ -71,17 +52,11 @@ export default function Contact({ theme }) {
             <div>
               {messageSubmitted ? (
                 <div className={styles.confirmSent}>
-                  <h3 style={{ color: themeStyle.submit }}>Message Sent</h3>
-                  <p style={{ color: themeStyle.para }}>
-                    Thank's for contacting me. {<br />} I'll be in touch.
-                  </p>
+                  <h3>Message Sent</h3>
+                  <p>Thank's for contacting me. {<br />} I'll be in touch.</p>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleEmailForm}
-                  className={styles.contactForm}
-                  style={{ color: themeStyle.para }}
-                >
+                <form onSubmit={handleEmailForm} className={styles.contactForm}>
                   <article>
                     <label htmlFor="name">Name</label>
                     <input
@@ -92,10 +67,6 @@ export default function Contact({ theme }) {
                       placeholder="Your Name"
                       onChange={(event) => {
                         setName(event.target.value);
-                      }}
-                      style={{
-                        background: themeStyle.input,
-                        color: themeStyle.inputText,
                       }}
                     />
                   </article>
@@ -111,10 +82,6 @@ export default function Contact({ theme }) {
                       onChange={(event) => {
                         setEmail(event.target.value);
                       }}
-                      style={{
-                        background: themeStyle.input,
-                        color: themeStyle.inputText,
-                      }}
                     />
                   </article>
                   <article>
@@ -128,18 +95,9 @@ export default function Contact({ theme }) {
                       onChange={(event) => {
                         setMessage(event.target.value);
                       }}
-                      style={{
-                        background: themeStyle.input,
-                        color: themeStyle.inputText,
-                      }}
                     />
                   </article>
-                  <button
-                    type="submit"
-                    style={{ background: themeStyle.submit }}
-                  >
-                    Send Message
-                  </button>
+                  <button type="submit">Send Message</button>
                   <p>All fields are required</p>
                 </form>
               )}
@@ -147,7 +105,7 @@ export default function Contact({ theme }) {
           </div>
         </section>
       </section>
-      <Footer theme={theme} />
+      <Footer />
     </>
   );
 }

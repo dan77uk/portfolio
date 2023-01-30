@@ -4,77 +4,33 @@
   width: 100%;
   padding: 30px 0;
   z-index: 1000;
+  opacity: 0.9;
+  background-color: var(--darkBackground);
 }
 
 .header article {
-  max-width: 760px;
+  max-width: 960px;
+  padding: 0 40px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  opacity: 1;
 }
 
-.header nav ul {
-  display: flex;
-  gap: 30px;
+.header article h1 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #ffffff;
 }
 
-.header nav ul li a {
-  text-decoration: none;
-  font-weight: 400;
-  transition: 0.2s;
-  padding-bottom: 5px;
-}
-
-/* --- Theme Toggle Switch --- */
-.themeToggle {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-.themeToggleLabel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  width: 60px;
-  height: 30px;
-  border-radius: 100px;
-  position: relative;
-  transition: background-color 0.2s;
-}
-
-.themeToggleLabel .themeToggleButton {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  width: 26px;
-  height: 26px;
-  border-radius: 15px;
-  transition: 0.2s;
-  background-position: center center;
-  background-size: 20px;
-  background-repeat: no-repeat;
-}
-
-.themeToggle:checked + .themeToggleLabel .themeToggleButton {
-  left: calc(100% - 3px);
-  transform: translateX(-100%);
-}
-
-.themeToggleLabel:active .themeToggleButton {
-  width: 60px;
+.header article h1 span {
+  font-weight: 200;
 }
 
 @media (max-width: 840px) {
   .header article {
     padding: 0 40px;
-  }
-
-  .header nav ul {
-    gap: 20px;
   }
 }
