@@ -20,27 +20,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 100;
 }
 
-.header article nav {
+#fullSiteNav {
   display: flex;
   gap: 20px;
 }
 
-.header article nav a {
+#fullSiteNav a {
   text-decoration: 0;
   font-weight: 600;
 }
 
-.light nav a {
+.light #fullSiteNav a {
   color: rgb(71, 71, 71);
 }
 
-.dark nav a {
+.dark #fullSiteNav a {
   color: rgb(234, 234, 234);
 }
 
-.header article nav a:after {
+.header #fullSiteNav a:after {
   content: "";
   width: 30px;
   height: 4px;
@@ -51,10 +52,67 @@
   transition: 0.4s;
 }
 
-.light article nav a:hover:after {
+.light #fullSiteNav a:hover:after {
   background-color: rgb(71, 71, 71);
 }
 
-.dark article nav a:hover:after {
+.dark #fullSiteNav a:hover:after {
   background-color: rgb(234, 234, 234);
+}
+
+#burgerMenuButton,
+#burgerMenu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  .header article {
+    padding: 0 20px;
+  }
+
+  #fullSiteNav {
+    display: none;
+  }
+
+  #burgerMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: none;
+    transition: 0.5s;
+  }
+
+  #burgerMenu {
+    display: block;
+    position: absolute;
+    left: -280px;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: solid 1px;
+    min-width: 280px;
+    z-index: -10;
+    padding: 40px;
+    -webkit-animation: slideIn 0.5s forwards;
+    animation: slideIn 0.5s forwards;
+  }
+
+  @keyframes slideIn {
+    100% {
+      left: 0;
+    }
+  }
+  @-webkit-keyframes slideIn {
+    100% {
+      left: 0;
+    }
+  }
 }
