@@ -28,6 +28,60 @@ button {
 
 main {
   min-height: 100vh;
+<<<<<<< HEAD
   transition: 0.3s;
   background-color: var(--darkBackground);
 }
+=======
+  transition: 0.6s;
+}
+
+.dark {
+  background-color: var(--darkBackground);
+}
+
+.light {
+  background-color: var(--lightBackground);
+}
+
+/* --- Nav Theme Colors --- */
+.dark nav li a {
+  color: var(--lightBackground);
+}
+
+.light nav li a {
+  color: var(--darkBackground);
+}
+
+.dark nav li a:hover {
+  color: var(--lightBackground);
+  border-bottom: solid 2px var(--blue);
+}
+
+.light nav li a:hover {
+  color: var(--darkBackground);
+  border-bottom: solid 2px var(--red);
+}
+
+/* --- Theme Toggle Colors --- */
+#lightStyle label {
+  background-color: var(--red);
+}
+
+#lightStyle label span {
+  background-color: var(--lightBackground);
+}
+
+#darkStyle,
+#lightStyle {
+  display: flex;
+}
+
+#darkStyle label {
+  background-color: var(--blue);
+}
+
+#darkStyle label span {
+  background-color: var(--darkBackground);
+}
+>>>>>>> parent of 859eff1 (style: moved light/dark theme styling out of global CSS into components as objects)

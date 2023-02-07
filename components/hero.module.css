@@ -73,6 +73,7 @@
     margin: 40px 0;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 480px) {
   .hero_section h1 {
@@ -86,3 +87,5 @@
     flex-direction: column;
   }
 }
+=======
+>>>>>>> parent of 859eff1 (style: moved light/dark theme styling out of global CSS into components as objects)
