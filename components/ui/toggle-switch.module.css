@@ -1,0 +1,55 @@
+#toggleContainer {
+  display: flex;
+}
+
+.checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switchLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 50px;
+  height: 20px;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.6s;
+}
+
+.light .switchLabel {
+  background-color: rgb(178, 178, 178);
+}
+.light .switchLabel .switchButton {
+  background-color: rgb(57, 59, 80);
+}
+
+.dark .switchLabel {
+  background-color: rgb(219, 219, 219);
+}
+.dark .switchLabel .switchButton {
+  background-color: rgb(105, 225, 227);
+}
+
+.switchLabel .switchButton {
+  content: "";
+  position: absolute;
+  top: -2.5px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 45px;
+  transition: 0.2s;
+}
+
+.checkbox:checked + .switchLabel .switchButton {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.switchLabel:active .switchButton {
+  width: 60px;
+}
