@@ -1,0 +1,157 @@
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--light);
+  min-height: 100vh;
+  margin-top: -10vh;
+}
+
+.dark {
+  background-color: var(--dark);
+}
+
+.hero article {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "title title title title title title"
+    ". . introPara introPara introPara introPara";
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+}
+
+.title h2 {
+  font-size: 1.6rem;
+  text-align: right;
+  font-weight: 600;
+  margin-bottom: -40px;
+}
+
+.title h2 span {
+  font-weight: 300;
+}
+
+.title h3 {
+  letter-spacing: -0.2rem;
+  font-size: 6rem;
+  font-weight: 800;
+  font-family: var(--titleFont);
+}
+
+.introText {
+  grid-area: introPara;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.introText h4 {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.07rem;
+  line-height: 1.1;
+}
+
+.introText h4 span {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.hero article a {
+  position: relative;
+  margin-right: auto;
+  text-decoration: none;
+  font-weight: 600;
+  border: solid 2px transparent;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: var(--light);
+  background-color: var(--redAccent);
+  transition: 500ms;
+}
+
+.hero article a:hover {
+  background-color: transparent;
+  border: solid 2px var(--redAccent);
+  color: var(--dark);
+}
+
+@media (max-width: 1000px) {
+  .hero article h2 {
+    font-size: 1.4rem;
+    margin-bottom: -30px;
+  }
+  .hero article h3 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero article {
+    grid-template-columns: 0.5fr 1fr 1fr;
+  }
+
+  .hero article h2 {
+    font-size: 1.2rem;
+  }
+  .hero article h3 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .title h2 {
+    font-size: 2rem !important;
+    text-align: left;
+    margin-bottom: 0 !important;
+  }
+
+  .hero article {
+    grid-template-columns: 0 1fr 1fr;
+    row-gap: 30px;
+  }
+
+  .hero article h3 {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .introText h4 {
+    font-size: 2.4rem;
+  }
+
+  .introText h4 span {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero article {
+    padding: 0 60px;
+  }
+  .title h2 {
+    font-size: 1.8rem !important;
+  }
+
+  .hero article h3 {
+    font-size: 4rem;
+  }
+
+  .introText {
+    padding-left: 20px;
+  }
+  .introText h4 {
+    font-size: 2rem;
+  }
+
+  .introText h4 span {
+    font-size: 1.5rem;
+  }
+}

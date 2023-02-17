@@ -21,17 +21,17 @@
 }
 
 .light .switchLabel {
-  background-color: rgb(178, 178, 178);
+  background-color: var(--dark);
 }
 .light .switchLabel .switchButton {
-  background-color: rgb(57, 59, 80);
+  background-color: var(--redAccent);
 }
 
 .dark .switchLabel {
-  background-color: rgb(219, 219, 219);
+  background-color: var(--light);
 }
 .dark .switchLabel .switchButton {
-  background-color: rgb(105, 225, 227);
+  background-color: var(--redAccent);
 }
 
 .switchLabel .switchButton {
@@ -51,5 +51,5 @@
 }
 
 .switchLabel:active .switchButton {
-  width: 60px;
+  width: 35px;
 }

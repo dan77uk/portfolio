@@ -1,0 +1,69 @@
+.frontend_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--light);
+  min-height: 100vh;
+}
+
+.frontend_wrapper article {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 40px;
+  grid-template-areas:
+    "title title title title title title"
+    ". para para para skills skills";
+}
+
+.dark {
+  background-color: var(--dark);
+}
+
+/* --- Copy Column --- */
+.frontend_wrapper article h2 {
+  font-size: 3rem;
+  font-weight: 200;
+  color: var(--dark);
+  font-family: var(--titleFont);
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+  grid-area: title;
+}
+
+.copy_container {
+  grid-area: para;
+  padding: 0 40px;
+}
+
+.copy_container h3 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.copy_container p {
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
+.skills {
+  grid-area: skills;
+  border-left: solid 1px #c4d9d7;
+  padding: 0 40px;
+}
+
+.skills ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+}
+
+.skills li {
+  padding: 10px 0;
+}
+
+.skills svg {
+  margin-right: 10px;
+  fill: rgb(92, 175, 151);
+}

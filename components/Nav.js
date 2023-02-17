@@ -10,7 +10,6 @@ export default function Nav() {
   function handleBurgerState() {
     setIsOpen(!isOpen);
   }
-
   return (
     <header className={`${styles.header} ${styles[theme]}`}>
       <article>
@@ -28,18 +27,16 @@ export default function Nav() {
                 y1="2.12091"
                 x2="2.12082"
                 y2="17.2884"
-                stroke="black"
-                stroke-width="4"
-                stroke-linecap="round"
+                strokeWidth="4"
+                strokeLinecap="round"
               />
               <line
                 x1="2.12132"
                 y1="1.60277"
                 x2="17"
                 y2="16.4814"
-                stroke="black"
-                stroke-width="4"
-                stroke-linecap="round"
+                strokeWidth="4"
+                strokeLinecap="round"
               />
             </svg>
           ) : (
@@ -55,27 +52,24 @@ export default function Nav() {
                 y1="1.5"
                 x2="28.5"
                 y2="1.5"
-                stroke="black"
-                stroke-width="4"
-                stroke-linecap="round"
+                strokeWidth="4"
+                strokeLinecap="round"
               />
               <line
                 x1="1.5"
                 y1="10.5"
                 x2="18.5"
                 y2="10.5"
-                stroke="black"
-                stroke-width="4"
-                stroke-linecap="round"
+                strokeWidth="4"
+                strokeLinecap="round"
               />
               <line
                 x1="1.5"
                 y1="19.5"
                 x2="13.5"
                 y2="19.5"
-                stroke="black"
-                stroke-width="4"
-                stroke-linecap="round"
+                strokeWidth="4"
+                strokeLinecap="round"
               />
             </svg>
           )}
@@ -96,7 +90,8 @@ export default function Nav() {
         <h1>LOGO</h1>
 
         <nav id={styles.fullSiteNav}>
-          <a href="#">ABOUT ME</a>
+          <a href="#">HOME</a>
+          <a href="#about">ABOUT ME</a>
           <a href="#">PROJECTS</a>
           <a href="#">CONTACT</a>
         </nav>

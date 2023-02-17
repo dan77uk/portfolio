@@ -2,19 +2,25 @@
   position: sticky;
   top: 0;
   width: 100%;
-  padding: 30px 0;
-  transition: 0.6s;
+  transition: 0.3s;
+  z-index: 1000;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: solid 10px var(--redAccent);
 }
 
 .light {
-  background-color: #dddddd;
+  background-color: var(--light);
 }
 .dark {
-  background-color: #24252e;
+  background-color: var(--dark);
 }
 
 .header article {
-  max-width: 960px;
+  max-width: 1200px;
+  flex-basis: 100%;
   padding: 0 40px;
   margin: 0 auto;
   display: flex;
@@ -25,39 +31,36 @@
 
 #fullSiteNav {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 #fullSiteNav a {
   text-decoration: 0;
   font-weight: 600;
+  margin-top: 6px;
 }
 
 .light #fullSiteNav a {
-  color: rgb(71, 71, 71);
+  color: var(--dark);
 }
 
 .dark #fullSiteNav a {
-  color: rgb(234, 234, 234);
+  color: var(--light);
 }
 
 .header #fullSiteNav a:after {
   content: "";
-  width: 30px;
+  width: 40px;
   height: 4px;
-  margin-left: auto;
+  margin: 2px 0 0 0;
   display: block;
   background-color: transparent;
   border-radius: 4px;
-  transition: 0.4s;
+  transition: 0.8s;
 }
 
-.light #fullSiteNav a:hover:after {
-  background-color: rgb(71, 71, 71);
-}
-
-.dark #fullSiteNav a:hover:after {
-  background-color: rgb(234, 234, 234);
+#fullSiteNav a:hover:after {
+  background-color: var(--redAccent);
 }
 
 #burgerMenuButton,
@@ -85,7 +88,27 @@
     width: 40px;
     height: 40px;
     border: none;
+    border-radius: 5px;
     background: none;
+    transition: 0.5s;
+  }
+
+  .light #burgerMenuButton:hover {
+    background-color: var(--dark);
+  }
+
+  .light #burgerMenuButton:hover svg,
+  .dark #burgerMenuButton:hover svg {
+    stroke: var(--accent);
+  }
+
+  .light #burgerMenuButton svg {
+    stroke: var(--dark);
+    transition: 0.5s;
+  }
+
+  .dark #burgerMenuButton svg {
+    stroke: var(--light);
     transition: 0.5s;
   }
 
@@ -103,6 +126,7 @@
     padding: 40px;
     -webkit-animation: slideIn 0.5s forwards;
     animation: slideIn 0.5s forwards;
+    background-color: white;
   }
 
   @keyframes slideIn {
