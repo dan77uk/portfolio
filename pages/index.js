@@ -1,13 +1,15 @@
-import About from "../components/About";
-import Hero from "../components/Hero";
-import Nav from "../components/Nav";
+import Hero from "../components/hero/Hero";
+import Nav from "../components/header/Nav";
+import Introduction from "../components/introduction/Introduction";
+import Skills from "../components/skills/Skills";
 
 export default function Home() {
   return (
     <main>
       <Nav />
       <Hero />
-      <About />
+      <Introduction />
+      <Skills />
     </main>
   );
 }

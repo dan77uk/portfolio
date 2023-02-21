@@ -1,6 +1,6 @@
 import styles from "./nav.module.css";
-import ToggleSwitch from "./ui/toggle-switch";
-import { ThemeContext } from "../context/Theme";
+import ToggleSwitch from "../ui/toggle/toggle-switch";
+import { ThemeContext } from "../../context/Theme";
 import { useContext, useState } from "react";
 
 export default function Nav() {
@@ -10,6 +10,7 @@ export default function Nav() {
   function handleBurgerState() {
     setIsOpen(!isOpen);
   }
+
   return (
     <header className={`${styles.header} ${styles[theme]}`}>
       <article>
@@ -88,13 +89,14 @@ export default function Nav() {
           </nav>
         )}
         <h1>LOGO</h1>
+        <div>
+          <nav id={styles.fullSiteNav}>
+            <a href="#">HOME</a>
 
-        <nav id={styles.fullSiteNav}>
-          <a href="#">HOME</a>
-          <a href="#about">ABOUT ME</a>
-          <a href="#">PROJECTS</a>
-          <a href="#">CONTACT</a>
-        </nav>
+            <a href="#about">ABOUT ME</a>
+            <a href="#">CONTACT</a>
+          </nav>
+        </div>
         <ToggleSwitch />
       </article>
     </header>

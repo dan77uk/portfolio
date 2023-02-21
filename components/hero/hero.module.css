@@ -1,0 +1,148 @@
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  min-height: 100vh;
+  margin-top: -13vh;
+  background: rgb(37, 39, 46);
+  background: -moz-linear-gradient(
+    52deg,
+    rgba(37, 39, 46, 1) 0%,
+    rgba(46, 51, 70, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    52deg,
+    rgba(37, 39, 46, 1) 0%,
+    rgba(46, 51, 70, 1) 100%
+  );
+  background: linear-gradient(
+    52deg,
+    rgba(37, 39, 46, 1) 0%,
+    rgba(46, 51, 70, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25272e",endColorstr="#2e3346",GradientType=1);
+}
+
+.light {
+  background-color: var(--light);
+}
+
+.hero article {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.hero article h2 {
+  font-size: 3rem;
+  margin-bottom: -40px;
+  color: var(--redAccent);
+  font-family: "Nothing You Could Do", cursive;
+  transform: rotate(-3deg);
+  letter-spacing: -0.2rem;
+}
+
+.hero article h2 span {
+  font-weight: 600;
+  color: var(--blueAccent);
+}
+
+.hero article h3 {
+  letter-spacing: -0.2rem;
+  font-size: 6rem;
+  font-weight: 400;
+  font-family: var(--titleFont);
+  color: var(--light);
+}
+
+.hero article h4 {
+  max-width: 750px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01rem;
+  line-height: 1.5;
+  color: var(--redAccent);
+}
+
+.hero article h4 span {
+  font-weight: 400;
+  color: var(--light);
+}
+
+.hero article a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px 30px;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 1000ms;
+  border: 2px solid;
+  --angle: 45deg;
+  border-image: linear-gradient(
+      var(--angle),
+      var(--blueAccent),
+      var(--redAccent)
+    )
+    1;
+}
+
+.hero article a:hover {
+}
+
+.hero article svg {
+  margin-left: 5px;
+  transform: rotate(90deg);
+  fill: var(--blueAccent);
+}
+
+@media (max-width: 960px) {
+  .hero article {
+    padding: 0 40px;
+  }
+
+  .hero article h2 {
+    font-size: 2.6rem;
+  }
+
+  .hero article h3 {
+    letter-spacing: -0.1rem;
+    font-size: 4rem;
+  }
+
+  .hero article h4 {
+    max-width: 80%;
+    font-size: 1.8rem;
+  }
+
+  .hero article h4 span {
+    font-size: 1.8rem;
+  }
+
+  .hero article a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero article h3 {
+    letter-spacing: -0.05rem;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero article h3 {
+    letter-spacing: -0.05rem;
+    font-size: 1rem;
+  }
+}

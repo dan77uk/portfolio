@@ -1,5 +1,5 @@
 import styles from "./toggle-switch.module.css";
-import { ThemeContext } from "../../context/Theme";
+import { ThemeContext } from "../../../context/Theme";
 import { useContext } from "react";
 
 export default function ToggleSwitch() {

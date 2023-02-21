@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./contact.module.css";
-import Footer from "./Footer";
+import Footer from "../footer/Footer";
 
 export default function Contact() {
   const [messageSubmitted, setMessageSubmitted] = useState(false);

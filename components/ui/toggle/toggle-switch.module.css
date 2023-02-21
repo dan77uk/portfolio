@@ -18,20 +18,14 @@
   border-radius: 20px;
   position: relative;
   transition: background-color 0.6s;
+  background-color: #3c4e63;
 }
 
 .light .switchLabel {
   background-color: var(--dark);
 }
 .light .switchLabel .switchButton {
-  background-color: var(--redAccent);
-}
-
-.dark .switchLabel {
-  background-color: var(--light);
-}
-.dark .switchLabel .switchButton {
-  background-color: var(--redAccent);
+  background-color: var(--limeAccent);
 }
 
 .switchLabel .switchButton {
@@ -43,6 +37,7 @@
   height: 25px;
   border-radius: 45px;
   transition: 0.2s;
+  background-color: var(--blueAccent);
 }
 
 .checkbox:checked + .switchLabel .switchButton {
