@@ -124,10 +124,6 @@
     font-size: 1.8rem;
   }
 
-  .hero article h4 span {
-    font-size: 1.8rem;
-  }
-
   .hero article a {
     font-size: 1rem;
   }
@@ -137,12 +133,18 @@
   .hero article h3 {
     letter-spacing: -0.05rem;
     font-size: 3rem;
+    margin-top: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .hero article h3 {
-    letter-spacing: -0.05rem;
-    font-size: 1rem;
+    letter-spacing: -0.03rem;
+    font-size: 2rem;
+  }
+
+  .hero article h4 {
+    letter-spacing: -0.03rem;
+    font-size: 1.5rem;
   }
 }

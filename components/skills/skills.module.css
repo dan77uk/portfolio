@@ -27,5 +27,17 @@
   padding: 0 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 10px;
+}
+
+@media (max-width: 960px) {
+  .skills article {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+}
+
+@media (max-width: 480px) {
 }

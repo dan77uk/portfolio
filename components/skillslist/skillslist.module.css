@@ -1,21 +1,30 @@
 .listContainer {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 100px auto;
-  padding: 0 40px;
+  padding: 40px;
   color: var(--light);
+  background-color: var(--dark);
 }
 
 .listContainer select {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   background-color: transparent;
+  background-color: var(--redAccent);
+
   border: none;
   font-weight: 600;
-  color: var(--blueAccent);
+  color: var(--light);
+  border: solid 1px var(--redAccent);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .listContainer ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 20px;
+  gap: 10px;
 }
 
 .listContainer li {
@@ -26,10 +35,29 @@
   justify-content: center;
   padding: 20px 0;
   gap: 20px;
-  /* border: solid 1px; */
+  background-color: #232429;
+  border-radius: 5px;
 }
 
 .listContainer li svg {
   width: 60px;
   fill: var(--light);
+}
+
+@media (max-width: 960px) {
+  .listContainer ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .listContainer ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .listContainer ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

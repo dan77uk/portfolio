@@ -1,5 +1,7 @@
 #toggleContainer {
   display: flex;
+  /* background: white; */
+  gap: 0px;
 }
 
 .checkbox {

@@ -9,7 +9,7 @@ export default function SkillsList() {
     event.preventDefault();
     setFilter(event.target.value);
   }
-  console.log(filter);
+
   return (
     <div className={styles.listContainer}>
       <select onChange={handleFilter} value={filter}>

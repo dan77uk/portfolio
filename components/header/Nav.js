@@ -88,15 +88,15 @@ export default function Nav() {
             </a>
           </nav>
         )}
-        <h1>LOGO</h1>
-        <div>
-          <nav id={styles.fullSiteNav}>
-            <a href="#">HOME</a>
 
-            <a href="#about">ABOUT ME</a>
-            <a href="#">CONTACT</a>
-          </nav>
-        </div>
+        <h1>LOGO</h1>
+
+        <nav id={styles.fullSiteNav}>
+          <a href="#">HOME</a>
+          <a href="#about">ABOUT ME</a>
+          <a href="#">CONTACT</a>
+        </nav>
+
         <ToggleSwitch />
       </article>
     </header>
